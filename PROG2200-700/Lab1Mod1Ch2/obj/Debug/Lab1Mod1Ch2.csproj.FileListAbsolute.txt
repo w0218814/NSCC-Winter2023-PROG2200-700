@@ -1,0 +1,8 @@
+C:\PROG2200\PROG2200-700\PROG2200-700\Lab1Mod1Ch2\obj\Debug\Lab1Mod1Ch2.csproj.AssemblyReference.cache
+C:\PROG2200\PROG2200-700\PROG2200-700\Lab1Mod1Ch2\obj\Debug\Lab1Mod1Ch2.csproj.SuggestedBindingRedirects.cache
+C:\PROG2200\PROG2200-700\PROG2200-700\Lab1Mod1Ch2\obj\Debug\Lab1Mod1Ch2.csproj.CoreCompileInputs.cache
+C:\PROG2200\PROG2200-700\PROG2200-700\Lab1Mod1Ch2\bin\Debug\Lab1Mod1Ch2.exe.config
+C:\PROG2200\PROG2200-700\PROG2200-700\Lab1Mod1Ch2\bin\Debug\Lab1Mod1Ch2.exe
+C:\PROG2200\PROG2200-700\PROG2200-700\Lab1Mod1Ch2\bin\Debug\Lab1Mod1Ch2.pdb
+C:\PROG2200\PROG2200-700\PROG2200-700\Lab1Mod1Ch2\obj\Debug\Lab1Mod1Ch2.exe
+C:\PROG2200\PROG2200-700\PROG2200-700\Lab1Mod1Ch2\obj\Debug\Lab1Mod1Ch2.pdb
