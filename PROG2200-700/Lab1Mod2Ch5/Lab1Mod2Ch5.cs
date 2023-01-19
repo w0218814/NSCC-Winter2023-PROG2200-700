@@ -1,4 +1,6 @@
-﻿using System;
+﻿//to be cleaned up
+
+using System;
 
 
 namespace Lab1Mod2Ch5
