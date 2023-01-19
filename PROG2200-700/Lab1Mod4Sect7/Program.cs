@@ -42,40 +42,40 @@ namespace Lab1Mod4Sect1
             switch (month)
             {
                 case 2:
-                    Console.WriteLine("you are an Aries.");
+                    Console.WriteLine("You are an Aries.");
                     break;
                 case 3:
-                    Console.WriteLine("you are an Taurus.");
+                    Console.WriteLine("You are an Taurus.");
                     break;
                 case 4:
-                    Console.WriteLine("you are an Gemini.");
+                    Console.WriteLine("You are an Gemini.");
                     break;
                 case 5:
-                    Console.WriteLine("you are an Cancer.");
+                    Console.WriteLine("You are an Cancer.");
                     break;
                 case 6:
-                    Console.WriteLine("you are an Leo.");
+                    Console.WriteLine("You are an Leo.");
                     break;
                 case 7:
-                    Console.WriteLine("you are an Virgo.");
+                    Console.WriteLine("You are an Virgo.");
                     break;
                 case 8:
-                    Console.WriteLine("you are an Libra.");
+                    Console.WriteLine("You are an Libra.");
                     break;
                 case 9:
-                    Console.WriteLine("you are an Scorpio.");
+                    Console.WriteLine("You are an Scorpio.");
                     break;
                 case 10:
-                    Console.WriteLine("you are an Sagittarius.");
+                    Console.WriteLine("You are an Sagittarius.");
                     break;
                 case 11:
-                    Console.WriteLine("you are an Capricornus.");
+                    Console.WriteLine("You are an Capricornus.");
                     break;
                 case 0:
-                    Console.WriteLine("you are an Aquarius.");
+                    Console.WriteLine("You are an Aquarius.");
                     break;
                 case 1:
-                    Console.WriteLine("you are an Pisces.");
+                    Console.WriteLine("You are an Pisces.");
                     break;
                 default:
                     Console.WriteLine("Incorrect Month number.");

@@ -13,93 +13,61 @@ namespace Lab1Mod2Ch5
             Console.WriteLine("What is your name?");
             var name = TryAnswer();
 
-            int Y;
-
-            if (string.IsNullOrEmpty(name))
-                while (Int32.TryParse(name, out Y))
-                {
-                    Console.WriteLine("Field cannot be a number, try again.");
-
-                    name = TryAnswer();
-                }
-            {
-                Console.WriteLine("Field can't be empty! Please try again once more");
-                name = Console.ReadLine();
-            }
-
 
             Console.WriteLine("What is your age?");
             var age = TryAnswer();
 
-            int X;
-
-
-            if (string.IsNullOrEmpty(age))
-                while (!Int32.TryParse(age, out X))
-                {
-                    Console.WriteLine("Not a valid integer, please try again.");
-
-                    age = TryAnswer();
-                }
-            {
-                Console.WriteLine("Field can't be empty! Please try again once more");
-                age = Console.ReadLine();
-            }
-
             Console.WriteLine("What month were you born in?");
             var month = TryAnswer();
-            int Z;
 
-            if (string.IsNullOrEmpty(month))
-                while (Int32.TryParse(month, out Z))
-                {
-                    Console.WriteLine("Field cannot be a number, try again.");
-
-                    month = TryAnswer();
-                }
-            {
-                Console.WriteLine("Field can't be empty! Please try again once more");
-                month = Console.ReadLine();
-            }
 
             Console.WriteLine("Your name is: {0}", name);
             Console.WriteLine("Your age is: {0}", age);
             Console.WriteLine("Your birth month is: {0}", month);
 
-            if (month == "march")
+            switch (month)
             {
-                Console.WriteLine("you are an Aries.");
-            }
-            else if (month == "april")
-            {
-                Console.WriteLine("you are a Taurus.");
-            }
-            else if (month == "may")
-            {
-                Console.WriteLine("you are a Gemini.");
-            }
-            else if (month == "october")
-            {
-                Console.WriteLine("you are a Scorpio.");
-            }
-            else if (month == "november")
-            {
-                Console.WriteLine("you are a Sagittarius.");
-            }
-            else if (month == "december")
-            {
-                Console.WriteLine("you are a Capricornus.");
-            }
-            else if (month == "january")
-            {
-                Console.WriteLine("you are a Aquarius.");
-            }
-            else if (month == "february")
-            {
-                Console.WriteLine("you are a Pisces.");
+                case "march":
+                    Console.WriteLine("you are an Aries.");
+                    break;
+                case "april":
+                    Console.WriteLine("you are an Taurus.");
+                    break;
+                case "may":
+                    Console.WriteLine("you are an Gemini.");
+                    break;
+                case "june":
+                    Console.WriteLine("you are an Cancer.");
+                    break;
+                case "july":
+                    Console.WriteLine("you are an Leo.");
+                    break;
+                case "august":
+                    Console.WriteLine("you are an Virgo.");
+                    break;
+                case "september":
+                    Console.WriteLine("you are an Libra.");
+                    break;
+                case "october":
+                    Console.WriteLine("you are an Scorpio.");
+                    break;
+                case "november":
+                    Console.WriteLine("you are an Sagittarius.");
+                    break;
+                case "december":
+                    Console.WriteLine("you are an Capricornus.");
+                    break;
+                case "january":
+                    Console.WriteLine("you are an Aquarius.");
+                    break;
+                case "february":
+                    Console.WriteLine("you are an Pisces.");
+                    break;
+                default:
+                    Console.WriteLine("Incorrect Month.");
+                    break;
             }
         }
-
 
             static string TryAnswer()
         {
