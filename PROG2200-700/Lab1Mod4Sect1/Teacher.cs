@@ -8,7 +8,6 @@ namespace Lab1Mod4Sect7
 {
 	internal class Teacher : Member, IPayee
 	{
-		public string Subject;
 
         public void Pay()
         {

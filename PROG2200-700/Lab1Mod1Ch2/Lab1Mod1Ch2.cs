@@ -17,6 +17,12 @@ namespace Lab1Mod1Ch2
 
                 case "secret":
                     Console.WriteLine("Authenticated");
+                    Console.WriteLine("Change Password? y/n");
+
+                    if (Console.ReadLine() != "n")
+                        Console.WriteLine("What is the new pass code for this session?");
+                    code = Console.ReadLine();
+                    Console.WriteLine("The new pass code for this session is " + code);
                     break;
 
                 default:

@@ -18,7 +18,7 @@ namespace Lab1Mod2Ch5
             var age = TryAnswer();
 
             Console.WriteLine("What month were you born in?");
-            var month = TryAnswer();
+            var month = TryAnswer().ToLower();
 
 
             Console.WriteLine("Your name is: {0}", name);
@@ -28,40 +28,40 @@ namespace Lab1Mod2Ch5
             switch (month)
             {
                 case "march":
-                    Console.WriteLine("you are an Aries.");
+                    Console.WriteLine("You are an Aries.");
                     break;
                 case "april":
-                    Console.WriteLine("you are an Taurus.");
+                    Console.WriteLine("You are an Taurus.");
                     break;
                 case "may":
-                    Console.WriteLine("you are an Gemini.");
+                    Console.WriteLine("You are an Gemini.");
                     break;
                 case "june":
-                    Console.WriteLine("you are an Cancer.");
+                    Console.WriteLine("You are an Cancer.");
                     break;
                 case "july":
-                    Console.WriteLine("you are an Leo.");
+                    Console.WriteLine("You are an Leo.");
                     break;
                 case "august":
-                    Console.WriteLine("you are an Virgo.");
+                    Console.WriteLine("You are an Virgo.");
                     break;
                 case "september":
-                    Console.WriteLine("you are an Libra.");
+                    Console.WriteLine("You are an Libra.");
                     break;
                 case "october":
-                    Console.WriteLine("you are an Scorpio.");
+                    Console.WriteLine("You are an Scorpio.");
                     break;
                 case "november":
-                    Console.WriteLine("you are an Sagittarius.");
+                    Console.WriteLine("You are an Sagittarius.");
                     break;
                 case "december":
-                    Console.WriteLine("you are an Capricornus.");
+                    Console.WriteLine("You are an Capricornus.");
                     break;
                 case "january":
-                    Console.WriteLine("you are an Aquarius.");
+                    Console.WriteLine("You are an Aquarius.");
                     break;
                 case "february":
-                    Console.WriteLine("you are an Pisces.");
+                    Console.WriteLine("You are an Pisces.");
                     break;
                 default:
                     Console.WriteLine("Incorrect Month.");

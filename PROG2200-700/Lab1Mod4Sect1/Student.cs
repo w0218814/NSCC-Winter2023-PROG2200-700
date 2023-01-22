@@ -9,12 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace Lab1Mod4Sect7
-{
-    interface IGraduate
-    {
-        void Graduate();
-    }
+namespace Lab1Mod4Sect7 { 
+
     internal class Student : Member
     {
         static public int Count = 0;

@@ -16,7 +16,7 @@ namespace Lab1Mod4Sect7
         MIT
     }
 
-    class Program : Student
+    class Program : Student, IGraduate
     {
         static List<Student> students = new List<Student>();
 
@@ -47,6 +47,22 @@ namespace Lab1Mod4Sect7
                     students.Add(newStudent);
                     Student.Count++;
                     Console.WriteLine("Student Count: {0}", Student.Count);
+
+                    Console.WriteLine("Are you a graduate? y/n");
+
+                    if (Console.ReadLine() != "n") 
+                    {
+
+                        Registrar registrar = new Registrar();
+                        registrar.GraduateAll(); 
+                    }
+
+
+                    else
+                        {
+                            adding = false;
+                        }
+                    
 
                     Console.WriteLine("Add another? y/n");
 
@@ -94,5 +110,13 @@ namespace Lab1Mod4Sect7
                 }
             }
         }
+
+        public void Graduate()
+        {
+            Registrar registrar = new Registrar();
+            registrar.GraduateAll();
+        }
+
+
     }
 }
