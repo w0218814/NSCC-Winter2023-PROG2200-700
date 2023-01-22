@@ -1,6 +1,4 @@
-﻿//to be cleaned up
-
-using System;
+﻿using System;
 using System.Xml.Linq;
 
 
