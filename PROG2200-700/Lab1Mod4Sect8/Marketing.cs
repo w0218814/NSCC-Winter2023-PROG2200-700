@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Lab1Mod4Sect8
 {
-    class Stats
+    class Marketing
     {
-        public void Start()
+        public void End()
         {
             Lab1Mod4Sect8.Posted += HasPosted;
         }
         void HasPosted()
         {
-            Console.Write("Posted and run started");
+            Console.Write("\nPosted and ended\n");
         }
     }
 }

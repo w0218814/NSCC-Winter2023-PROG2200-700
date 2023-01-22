@@ -20,7 +20,7 @@ namespace Lab1Mod4Sect1
     December = 11,
 }
 
-    class Program
+    class Lab1Mod4Sect1
     {
         static void Main(string[] args)
         {

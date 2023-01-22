@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MyCustomException.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Lab1Mod3Ch4Enh.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

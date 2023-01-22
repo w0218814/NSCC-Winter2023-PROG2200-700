@@ -33,7 +33,7 @@ namespace Lab1Mod4Sect8
             }
         }
     }
-    class Program
+    class Lab1Mod4Sect8
     {
         static public event Action Posted;
         static void Main(string[] args)
@@ -53,9 +53,17 @@ namespace Lab1Mod4Sect8
             Console.WriteLine("What month were you born in?");
             data.Month = TryAnswer();
 
-            Posted();
+            if (Posted !=null)
+                Posted();
+
+     
 
             data.Display();
+
+            Marketing marketing = new Marketing();
+            marketing.End();
+            if (Posted != null)
+                Posted();
         }
 
         static string TryAnswer()
