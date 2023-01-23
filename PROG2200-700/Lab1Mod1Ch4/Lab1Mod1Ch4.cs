@@ -7,26 +7,22 @@ namespace SchoolTracker
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("How many students?");
+            var studentCount = int.Parse(Console.ReadLine());
+            var studentArray = new string[studentCount, 2];
 
-            var adding = true;
-
-            while (adding)
+            for (int i = 0; i < studentArray.GetLength(0); i++)
             {
-                Console.Write("Student Name: ");
-                string studentNames= Console.ReadLine();
+                Console.WriteLine("Name of Student: ");
+                studentArray[i, 0] = Console.ReadLine();
 
-                Console.Write("Student Grade: ");
-                string studentGrades = Console.ReadLine();
+                Console.WriteLine("Student Grade: ");
+                studentArray[i, 1] = Console.ReadLine();
 
-                Console.WriteLine("Add another? y/n");
-
-                if (Console.ReadLine() != "y")
-                    adding = false;
             }
-
-            for (int i = 0; i < studentNames.Count; i++)
+            for (int i = 0; i < studentCount; i++)
             {
-                Console.WriteLine("Name: {0}, Grade: {1}", studentNames[i], studentGrades[i]);
+                Console.WriteLine("Name: {0}, Grade {1}", studentArray[i, 0], studentArray[i, 1]);
             }
         }
     }
