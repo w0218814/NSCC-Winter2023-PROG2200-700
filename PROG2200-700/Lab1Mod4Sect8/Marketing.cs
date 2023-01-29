@@ -14,7 +14,8 @@ namespace Lab1Mod4Sect8
         }
         void HasPosted()
         {
-            Console.Write("\nPosted and ended\n");
+            Console.WriteLine("Thank you for completing the survey. You are now subscribed to ten of our newsletters.");
         }
     }
-}
+    }
+

@@ -14,7 +14,7 @@ namespace Lab1Mod4Sect8
         }
         void HasPosted()
         {
-            Console.Write("Posted and run started");
+            Console.WriteLine("Survey Posted, Start");
         }
     }
 }

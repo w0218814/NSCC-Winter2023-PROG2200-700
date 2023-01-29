@@ -1,5 +1,5 @@
-﻿using Lab1Mod3Ch4Enhanced;
-using System;
+﻿using System;
+using System.Runtime.Serialization;
 using System.Xml.Linq;
 
 
@@ -12,10 +12,8 @@ namespace Lab1Mod2Ch5
         {
             bool check = false;
 
-
             Console.WriteLine("Please Enter the Name");
-
-                var name = TryAnswer().ToLower();
+            var name = TryAnswer().ToLower();
 
             for (int i = 0; i < name.Length; i++)
             {
@@ -30,129 +28,100 @@ namespace Lab1Mod2Ch5
                 }
 
             }
-            try
+
+            if (check == false)
             {
-                if (check == false)
-                {
-                    name = TryAnswer().ToLower();
-                    Console.WriteLine("An error was handled");
-                    throw new MyCustomException(name);
-
-                } 
-            }
-            catch (MyCustomException)
-            {
-                Console.WriteLine("Please try again");
-            }
-            finally
-            {
-                check = false;
-
-
-                Console.WriteLine("Please Enter the Name");
-
+                Console.WriteLine("Enter Valid Value");
                 name = TryAnswer().ToLower();
-
-                for (int p = 0; p < name.Length; p++)
-                {
-                    if (name[p] >= 'a' && name[p] <= 'z' || name[p] == ' ')
-                    {
-                        check = true;
-                    }
-                    else
-                    {
-                        check = false;
-                        break;
-                    }
-
-                }
-
-                    if (check == false)
-                    {
-                    Console.WriteLine("Enter Valid Value");
-                    name = TryAnswer().ToLower();
- 
-
-                    }
-                }
-            
+            }
 
             Console.WriteLine("What is your age?");
-                var age = TryAnswer();
-                bool checkAgain = false;
+            var age = TryAnswer();
+            bool checkAgain = false;
 
-                Console.WriteLine("What month were you born in");
-                var month = TryAnswer().ToLower();
+            Console.WriteLine("What month were you born in");
+            var month = TryAnswer().ToLower();
 
-                for (int i = 0; i < month.Length; i++)
+            for (int i = 0; i < month.Length; i++)
+            {
+                if (month[i] >= 'a' && month[i] <= 'z' || month[i] == ' ')
                 {
-                    if (month[i] >= 'a' && month[i] <= 'z' || month[i] == ' ')
-                    {
-                        checkAgain = true;
-                    }
-                    else
-                    {
-                        checkAgain = false;
-                        break;
-                    }
-
+                    checkAgain = true;
+                }
+                else
+                {
+                    checkAgain = false;
+                    break;
                 }
 
-                if (checkAgain == false)
-                {
-                    Console.WriteLine("Enter Valid Value");
-                    month = TryAnswer().ToLower();
-                }
+            }
 
+            if (checkAgain == false)
+            {
+                Console.WriteLine("Enter Valid Value");
+                month = TryAnswer().ToLower();
+            }
 
+            try
+            {
                 Console.WriteLine("Your name is: {0}", name);
                 Console.WriteLine("Your age is: {0}", age);
                 Console.WriteLine("Your birth month is: {0}", month);
-
-                switch (month)
-                {
-                    case "march":
-                        Console.WriteLine("You are an Aries.");
-                        break;
-                    case "april":
-                        Console.WriteLine("You are a Taurus.");
-                        break;
-                    case "may":
-                        Console.WriteLine("You are a Gemini.");
-                        break;
-                    case "june":
-                        Console.WriteLine("You are a Cancer.");
-                        break;
-                    case "july":
-                        Console.WriteLine("You are a Leo.");
-                        break;
-                    case "august":
-                        Console.WriteLine("You are a Virgo.");
-                        break;
-                    case "september":
-                        Console.WriteLine("You are a Libra.");
-                        break;
-                    case "october":
-                        Console.WriteLine("You are a Scorpio.");
-                        break;
-                    case "november":
-                        Console.WriteLine("You are a Sagittarius.");
-                        break;
-                    case "december":
-                        Console.WriteLine("You are a Capricornus.");
-                        break;
-                    case "january":
-                        Console.WriteLine("You are an Aquarius.");
-                        break;
-                    case "february":
-                        Console.WriteLine("You are a Pisces.");
-                        break;
-                    default:
-                        Console.WriteLine("Incorrect Month.");
-                        break;
-                }
             }
 
+            catch (MyCustomException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception) // Generic Exception Error
+            {
+                Console.WriteLine("Error adding, Please try again");
+            }
+
+
+            switch (month)
+            {
+                case "march":
+                    Console.WriteLine("You are an Aries.");
+                    break;
+                case "april":
+                    Console.WriteLine("You are a Taurus.");
+                    break;
+                case "may":
+                    Console.WriteLine("You are a Gemini.");
+                    break;
+                case "june":
+                    Console.WriteLine("You are a Cancer.");
+                    break;
+                case "july":
+                    Console.WriteLine("You are a Leo.");
+                    break;
+                case "august":
+                    Console.WriteLine("You are a Virgo.");
+                    break;
+                case "september":
+                    Console.WriteLine("You are a Libra.");
+                    break;
+                case "october":
+                    Console.WriteLine("You are a Scorpio.");
+                    break;
+                case "november":
+                    Console.WriteLine("You are a Sagittarius.");
+                    break;
+                case "december":
+                    Console.WriteLine("You are a Capricornus.");
+                    break;
+                case "january":
+                    Console.WriteLine("You are an Aquarius.");
+                    break;
+                case "february":
+                    Console.WriteLine("You are a Pisces.");
+                    break;
+                default:
+                    Console.WriteLine("Incorrect Month.");
+                    break;
+            }
+        }
         static string TryAnswer()
         {
             var question = Console.ReadLine();
@@ -165,3 +134,32 @@ namespace Lab1Mod2Ch5
         }
     }
 }
+
+internal class MyCustomException : Exception
+{
+    public MyCustomException()
+    {
+        Console.WriteLine("Error adding, Please try again");
+    }
+
+    public MyCustomException(string message) : base(message)
+    {
+        Console.WriteLine("Error adding, Please try again");
+    }
+
+    public MyCustomException(string message, Exception innerException) : base(message, innerException)
+    {
+        Console.WriteLine("Error adding, Please try again");
+    }
+
+    protected MyCustomException(SerializationInfo info, StreamingContext context) : base(info, context)
+    {
+        Console.WriteLine("Error adding, Please try again");
+    }
+}
+
+
+
+
+
+
